@@ -1,0 +1,49 @@
+// Стилі компонента App (CSS Module: класи ізольовані в межах компонента).
+@use "./styles/variables" as *;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: $space-xl;
+  width: 100%;
+  max-width: $container-max-width;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: $space-xl $space-lg;
+
+  @media (width <= $bp-mobile) {
+    gap: $space-lg;
+    padding: $space-lg $space-md;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  padding: $space-xl;
+  border: 1px solid $color-border;
+  border-radius: $radius-lg;
+  background-color: $color-surface;
+  box-shadow: $shadow-card;
+
+  @media (width <= $bp-mobile) {
+    padding: $space-lg;
+  }
+}
+
+.title {
+  color: $color-accent;
+}
+
+.subtitle {
+  font-size: $font-size-lg;
+  color: $color-text-muted;
+}
+
+.main {
+  flex: 1;
+  padding: $space-lg;
+  border-radius: $radius-md;
+  background-color: $color-surface;
+}
